@@ -1,12 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
     <title>Aldeanos vs Monstruos</title>
 </head>
 <body>
-    <header>Aldeanos vs Monstruos</header>
+    <header>
+        <script src="script.js"></script>
+        <h1 class="title" >Aldeanos vs Monstruos</h1>
+    </header>
+    <main>
+        <section class="container-menu">
+            <h2 class="phrase">No confíes en nadie...</h2>
+            <figure>
+                <img src="werewolf.jpg" class="werewolf" alt="werewolf" style="width:100%">
+            </figure>
+            <label for="play"></label>
+            <input type="button" class="btn-play" id="btn-play" onclick="play()" value="Jugar" name="play">
+            <label for="tutorial"></label>
+            <input type="button" class="btn-tutorial" value="Tutorial" name="tutorial">
+        </section>
+    </main>
+    <footer>
+        <p class="author">&copy Creado por Cristian</p>
+        <p class="version">Version: 0.1</p>
+    </footer>
 </body>
 </html>
