@@ -1,3 +1,4 @@
+/*Home*/
 body {
     background: rgb(219, 122, 10);
     background-image: url("castle-home.jpg");
@@ -7,73 +8,33 @@ body {
 }
 
 .title {
+    margin-top: 0.25%;
     text-align: center;
     font-family: 'Uncial Antiqua', cursive;
     font-size: 4vw;
-
     text-shadow: 0px 2px 1px rgba(255, 255, 255, 0.4);
 }
 
-.container-menu {
+.containerMenu {
     background: rgb(95, 60, 50);
-    width: 30%;
+    width: 30vw;
     margin: auto;
     height: 40vw;
     border-radius: 1vw;
     border: none;
 }
 
-#createPlayers {
-    position: absolute;
-    top: 22vw;
-    left: 45vw;
-    position: absolute;
-    height: 3vw;
-    width: 10vw;
-    border-radius: 0.25vw;
-    border: none;
-    font-size: 1.75vw;
-    text-align: center;
-}
-
-#createButtom {
-    position: absolute;
-    top: 28vw;
-    left: 45vw;
-    position: absolute;
-    height: 3vw;
-    width: 10vw;
-    border-radius: 0.25vw;
-    border: none;
-    font-size: 1.75vw;
-    text-align: center;
-}
-
-#createPlayers:hover {
-    background-color: rgb(255, 130, 0);
-    transition-duration: 0.25s;
-    transform:scale(1.20);
-}
-
-#createButtom:hover {
-    background-color: rgb(255, 130, 0);
-    transition-duration: 0.65s;
-    transform:scale(1.20);
-}
-
-
 .phrase {
-    font-size: 2.5vw;
+    font-size: 2vw;
     text-align: center;
-    margin: auto;
-    margin-top: 7.5%;
-    margin-bottom: 5%;
-    padding-top: 2%;
+    margin: 0px auto;
+    padding: 4%;
     font-family: "Italianno", cursive;
     font-weight: bold;
+    text-shadow: 0px 2px 1px rgba(255, 255, 255, 0.4);
 }
 
-.werewolf {
+.homeWerewolf {
     max-width: 65%;
     max-height: 65%;
     display: block;
@@ -86,7 +47,7 @@ body {
     margin-top: 40%;
     margin-bottom: 5%;
     height: 3vw;
-    width: 10vw;
+    width: 12vw;
     border-radius: 0.25vw;
     border: none;
     background: rgb(130, 150, 150);
@@ -100,12 +61,11 @@ body {
     transform:scale(1.20);
 }
 
-
 .btn-tutorial{
     margin: auto;
     display: block;
     height: 3vw;
-    width: 10vw;
+    width: 12vw;
     border-radius: 0.25vw;
     border: none;
     background: rgb(130, 150, 150);
@@ -118,6 +78,270 @@ body {
     transition-duration: 0.65s;
     transform:scale(1.20);
 }
+
+/*Phase 2: Select the numbers fo players*/
+
+
+#player1 {
+    position: absolute;
+    top: 10vw;
+    left: 15vw;
+    height: 3vw;
+    width: 12vw;
+    border-radius: 0.25vw;
+    border: none;
+    font-size: 1.75vw;
+    text-align: center;
+    color: rgb(36, 36, 36);
+}
+
+#player2 {
+    position: absolute;
+    top: 10vw;
+    left: 30vw;
+    height: 3vw;
+    width: 12vw;
+    border-radius: 0.25vw;
+    border: none;
+    font-size: 1.75vw;
+    text-align: center;
+    color: rgb(36, 36, 36);
+}
+
+#player3 {
+    position: absolute;
+    top: 10vw;
+    left: 45vw;
+    height: 3vw;
+    width: 12vw;
+    border-radius: 0.25vw;
+    border: none;
+    font-size: 1.75vw;
+    text-align: center;
+    color: rgb(36, 36, 36);
+}
+
+#player4 {
+    position: absolute;
+    top: 17.5vw;
+    left: 15vw;
+    height: 3vw;
+    width: 12vw;
+    border-radius: 0.25vw;
+    border: none;
+    font-size: 1.75vw;
+    text-align: center;
+    color: rgb(36, 36, 36);
+}
+
+#player5 {
+    position: absolute;
+    top: 17.5vw;
+    left: 30vw;
+    height: 3vw;
+    width: 12vw;
+    border-radius: 0.25vw;
+    border: none;
+    font-size: 1.75vw;
+    text-align: center;
+    color: rgb(36, 36, 36);
+}
+
+#player6 {
+    position: absolute;
+    top: 17.5vw;
+    left: 45vw;
+    height: 3vw;
+    width: 12vw;
+    border-radius: 0.25vw;
+    border: none;
+    font-size: 1.75vw;
+    text-align: center;
+    color: rgb(36, 36, 36);
+}
+
+#player7 {
+    position: absolute;
+    top: 25vw;
+    left: 15vw;
+    height: 3vw;
+    width: 12vw;
+    border-radius: 0.25vw;
+    border: none;
+    font-size: 1.75vw;
+    text-align: center;
+    color: rgb(36, 36, 36);
+}
+
+#player8 {
+    position: absolute;
+    top: 25vw;
+    left: 30vw;
+    height: 3vw;
+    width: 12vw;
+    border-radius: 0.25vw;
+    border: none;
+    font-size: 1.75vw;
+    text-align: center;
+    color: rgb(36, 36, 36);
+}
+
+#btnPlayerSelection {
+    position: absolute;
+    top: 8vw;
+    left: 80vw;
+    height: 2.5vw;
+    width: 8vw;
+    border-radius: 0.25vw;
+    border: none;
+    font-size: 1.75vw;
+    text-align: center;
+}
+
+#addAnotherPlayer {
+    position: absolute;
+    top: 8vw;
+    left: 70vw;
+    height: 2.5vw;
+    width: 8vw;
+    border-radius: 0.25vw;
+    border: none;
+    font-size: 1.75vw;
+    text-align: center;
+}
+
+#addAnotherPlayer:hover {
+    background-color: rgb(255, 130, 0);
+    transition-duration: 0.25s;
+    transform:scale(1.20);
+    color: bisque;
+}
+
+#btnPlayerSelection:hover {
+    background-color: rgb(255, 130, 0);
+    transition-duration: 0.25s;
+    transform:scale(1.20);
+    color: bisque;
+}
+
+#player1:hover {
+    background-color: rgb(255, 130, 0);
+    transition-duration: 0.25s;
+    transform:scale(1.20);
+    color: bisque;
+}
+
+#player2:hover {
+    background-color: rgb(255, 130, 0);
+    transition-duration: 0.25s;
+    transform:scale(1.20);
+    color: bisque;
+}
+
+#player3:hover {
+    background-color: rgb(255, 130, 0);
+    transition-duration: 0.25s;
+    transform:scale(1.20);
+    color: bisque;
+}
+
+#player4:hover {
+    background-color: rgb(255, 130, 0);
+    transition-duration: 0.25s;
+    transform:scale(1.20);
+    color: bisque;
+}
+
+#player5:hover {
+    background-color: rgb(255, 130, 0);
+    transition-duration: 0.25s;
+    transform:scale(1.20);
+    color: bisque;
+}
+
+#player6:hover {
+    background-color: rgb(255, 130, 0);
+    transition-duration: 0.25s;
+    transform:scale(1.20);
+    color: bisque;
+}
+
+#player7:hover {
+    background-color: rgb(255, 130, 0);
+    transition-duration: 0.25s;
+    transform:scale(1.20);
+    color: bisque;
+}
+
+#player8:hover {
+    background-color: rgb(255, 130, 0);
+    transition-duration: 0.25s;
+    transform:scale(1.20);
+    color: bisque;
+}
+
+/*Phase 3: Choose players type*/
+
+#farmer {
+    position: absolute;
+    top: 10vw;
+    left: 15vw;
+    height: 3vw;
+    width: 12vw;
+    border-radius: 0.25vw;
+    border: none;
+    font-size: 1.75vw;
+    text-align: center;
+    color: rgb(36, 36, 36);
+}
+
+#werewolf {
+    position: absolute;
+    top: 10vw;
+    left: 30vw;
+    height: 3vw;
+    width: 12vw;
+    border-radius: 0.25vw;
+    border: none;
+    font-size: 1.75vw;
+    text-align: center;
+    color: rgb(36, 36, 36);
+}
+
+#seer {
+    position: absolute;
+    top: 10vw;
+    left: 45vw;
+    height: 3vw;
+    width: 12vw;
+    border-radius: 0.25vw;
+    border: none;
+    font-size: 1.75vw;
+    text-align: center;
+    color: rgb(36, 36, 36);
+}
+
+#farmer:hover {
+    background-color: rgb(255, 130, 0);
+    transition-duration: 0.25s;
+    transform:scale(1.20);
+    color: bisque;
+}
+
+#werewolf:hover {
+    background-color: rgb(255, 130, 0);
+    transition-duration: 0.25s;
+    transform:scale(1.20);
+    color: bisque;
+}
+
+#seer:hover {
+    background-color: rgb(255, 130, 0);
+    transition-duration: 0.25s;
+    transform:scale(1.20);
+    color: bisque;
+}
+/* ALways in sight */
 
 footer {
     text-align: center;

@@ -1,48 +1,100 @@
-function choosePlayers() {
-    removeMenu();
-    document.getElementById("phrase").textContent = "Selecciona la cantidad de jugadores";
-    document.getElementById("phrase").style.fontFamily = "sans-serif,Impact,Charcoal";
-    createSelect();
-    createButtom()
+"use strict";
+
+//constructor
+function Player(name, isAlive){
+    this.name = name;
+    this.isAlive = true;
 }
 
-function removeMenu() {
-    document.getElementById("btn-play").style.display = "none";
-    document.getElementById("btn-tutorial").style.display = "none";
-    document.getElementById("werewolf").style.display = "none";
+var count = 1;
+
+function removeElement(id) {
+    document.getElementById(id).style.display = "none";
+};
+
+function cleanHome() {
+    removeElement("btn-play");
+    removeElement("btn-tutorial");
+    removeElement("homeWerewolf");
+};
+
+function setAttribute(element, key, value) {
+    element.style[key] = value
 }
 
-function createSelect() {
-    let select = document.createElement("Select");
-    select.setAttribute("id", "createPlayers");
-    document.body.appendChild(select);
+function phaseSelectPlayer() {
+    //Change phrase
+    document.getElementById("phrase").textContent = "Introduce el nombre del jugador";
+    setAttribute(document.getElementById("phrase"), "fontFamily", "sans-serif,Impact,Charcoal");
+    setAttribute(document.getElementById("phrase"), "textShadow", "none");
+    setAttribute(document.getElementById("phrase"), "padding", "0.5%");
+    //Change the container size
+    document.getElementById("containerMenu").setAttribute("style", "width: 80vw;");
+};
 
-    let option1 = document.createElement("option");
-    let option2 = document.createElement("option");
-    let option3 = document.createElement("option");
-    let option4 = document.createElement("option");
-    option1.setAttribute("value", "5");
-    option2.setAttribute("value", "6");
-    option3.setAttribute("value", "7");
-    option4.setAttribute("value", "8");
-    let nod1 = document.createTextNode("5");
-    let nod2 = document.createTextNode("6");
-    let nod3 = document.createTextNode("7");
-    let nod4 = document.createTextNode("8");
-    option1.appendChild(nod1);
-    option2.appendChild(nod2);
-    option3.appendChild(nod3);
-    option4.appendChild(nod4);
-    document.getElementById("createPlayers").appendChild(option1);
-    document.getElementById("createPlayers").appendChild(option2);
-    document.getElementById("createPlayers").appendChild(option3);
-    document.getElementById("createPlayers").appendChild(option4);
-}
+function nameOfPlayer(number) {
+    let input = document.createElement("input");
+    input.setAttribute("id", "player" + number);
+    input.setAttribute("type", "text");
+    input.setAttribute("autofocus", "");
+    input.setAttribute("value", "");
+    input.setAttribute("autocomplete", "off");
+    document.body.appendChild(input);
+};
 
-function createButtom() {
-    let btn = document.createElement("BUTTON");
-    btn.setAttribute("id", "createButtom");
-    let text = document.createTextNode("Seleccionar");
+function createButton(id, onClick, name) {
+    let btn = document.createElement("button");
+    btn.setAttribute("id", id);
+    let text = document.createTextNode(name);
+    btn.setAttribute("onclick", onClick);
     btn.appendChild(text);
     document.body.appendChild(btn);
+};
+
+function addAnotherPlayer(){
+    count++;
+    if(count == 8){
+        removeElement("addAnotherPlayer");
+    }
+    nameOfPlayer(count);
+};
+
+//Phase 1 
+function choosePlayers() {
+    cleanHome();
+    phaseSelectPlayer();
+    nameOfPlayer(count); //"count" To change the css id
+    createButton("addAnotherPlayer", "addAnotherPlayer()", "+");
+    createButton("btnPlayerSelection", "toSelectType()", "->");
+    document.getElementById("btnPlayerSelection").onclick = function() {
+        toSelectType()
+    }
+};
+
+function hideInputPlayers() {
+    removeElement("player1");
+    removeElement("player2");
+    removeElement("player3");
+    removeElement("player4");
+    removeElement("player5");
+    removeElement("player6");
+    removeElement("player7");
+    removeElement("player8");
+}
+
+//Phase 2
+function addType(){
+
+}
+
+function toSelectType() {
+    document.getElementById("phrase").textContent = "Selecciona los tipos de clase";
+    createButton("farmer", "addType()", "Granjero");
+    createButton("werewolf", "addType()", "Lobo");
+    createButton("seer", "addType()", "Vidente");
+    removeElement("addAnotherPlayer");
+    hideInputPlayers()
+    document.getElementById("farmer").onclick = function() {
+        addType()
+    }
 }
